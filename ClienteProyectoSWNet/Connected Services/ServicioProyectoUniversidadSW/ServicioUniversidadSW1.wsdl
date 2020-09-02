@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://model/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioUniversidadSW" targetNamespace="http://model/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://192.168.16.4:7101/AplicacionServidorJava-ProyectoServidorJavaSW-context-root/ServicioUniversidadSWPort?xsd=1" namespace="http://model/" />
+    </xsd:schema>
+  </types>
+  <message name="getMatriculas">
+    <part name="parameters" element="tns:getMatriculas" />
+  </message>
+  <message name="getMatriculasResponse">
+    <part name="parameters" element="tns:getMatriculasResponse" />
+  </message>
+  <message name="getProgramas">
+    <part name="parameters" element="tns:getProgramas" />
+  </message>
+  <message name="getProgramasResponse">
+    <part name="parameters" element="tns:getProgramasResponse" />
+  </message>
+  <message name="listarEstudiantes">
+    <part name="parameters" element="tns:listarEstudiantes" />
+  </message>
+  <message name="listarEstudiantesResponse">
+    <part name="parameters" element="tns:listarEstudiantesResponse" />
+  </message>
+  <message name="cargarDatosPrograma">
+    <part name="parameters" element="tns:cargarDatosPrograma" />
+  </message>
+  <message name="buscarEstudiantePorCodigo">
+    <part name="parameters" element="tns:buscarEstudiantePorCodigo" />
+  </message>
+  <message name="buscarEstudiantePorCodigoResponse">
+    <part name="parameters" element="tns:buscarEstudiantePorCodigoResponse" />
+  </message>
+  <message name="buscarMatricula">
+    <part name="parameters" element="tns:buscarMatricula" />
+  </message>
+  <message name="buscarMatriculaResponse">
+    <part name="parameters" element="tns:buscarMatriculaResponse" />
+  </message>
+  <message name="eliminarPorCodigoEstudiante">
+    <part name="parameters" element="tns:eliminarPorCodigoEstudiante" />
+  </message>
+  <message name="actualizarEstudiantePorCodigo">
+    <part name="parameters" element="tns:actualizarEstudiantePorCodigo" />
+  </message>
+  <message name="listarProgramas">
+    <part name="parameters" element="tns:listarProgramas" />
+  </message>
+  <message name="listarProgramasResponse">
+    <part name="parameters" element="tns:listarProgramasResponse" />
+  </message>
+  <message name="getEstudiantes">
+    <part name="parameters" element="tns:getEstudiantes" />
+  </message>
+  <message name="getEstudiantesResponse">
+    <part name="parameters" element="tns:getEstudiantesResponse" />
+  </message>
+  <message name="cargarDatosEstudiantes">
+    <part name="parameters" element="tns:cargarDatosEstudiantes" />
+  </message>
+  <message name="cargarDatosMatricula">
+    <part name="parameters" element="tns:cargarDatosMatricula" />
+  </message>
+  <message name="listarMatriculas">
+    <part name="parameters" element="tns:listarMatriculas" />
+  </message>
+  <message name="listarMatriculasResponse">
+    <part name="parameters" element="tns:listarMatriculasResponse" />
+  </message>
+  <message name="anadirEstudiante">
+    <part name="parameters" element="tns:anadirEstudiante" />
+  </message>
+  <message name="anadirMatricula">
+    <part name="parameters" element="tns:anadirMatricula" />
+  </message>
+  <message name="eliminarPorNumeroMatricula">
+    <part name="parameters" element="tns:eliminarPorNumeroMatricula" />
+  </message>
+  <message name="actualizarMatricula">
+    <part name="parameters" element="tns:actualizarMatricula" />
+  </message>
+  <portType name="ServicioUniversidadSW">
+    <operation name="getMatriculas">
+      <input wsam:Action="http://model/ServicioUniversidadSW/getMatriculasRequest" message="tns:getMatriculas" />
+      <output wsam:Action="http://model/ServicioUniversidadSW/getMatriculasResponse" message="tns:getMatriculasResponse" />
+    </operation>
+    <operation name="getProgramas">
+      <input wsam:Action="http://model/ServicioUniversidadSW/getProgramasRequest" message="tns:getProgramas" />
+      <output wsam:Action="http://model/ServicioUniversidadSW/getProgramasResponse" message="tns:getProgramasResponse" />
+    </operation>
+    <operation name="listarEstudiantes">
+      <input wsam:Action="http://model/ServicioUniversidadSW/listarEstudiantesRequest" message="tns:listarEstudiantes" />
+      <output wsam:Action="http://model/ServicioUniversidadSW/listarEstudiantesResponse" message="tns:listarEstudiantesResponse" />
+    </operation>
+    <operation name="cargarDatosPrograma">
+      <input wsam:Action="http://model/ServicioUniversidadSW/cargarDatosPrograma" message="tns:cargarDatosPrograma" />
+    </operation>
+    <operation name="buscarEstudiantePorCodigo">
+      <input wsam:Action="http://model/ServicioUniversidadSW/buscarEstudiantePorCodigoRequest" message="tns:buscarEstudiantePorCodigo" />
+      <output wsam:Action="http://model/ServicioUniversidadSW/buscarEstudiantePorCodigoResponse" message="tns:buscarEstudiantePorCodigoResponse" />
+    </operation>
+    <operation name="buscarMatricula">
+      <input wsam:Action="http://model/ServicioUniversidadSW/buscarMatriculaRequest" message="tns:buscarMatricula" />
+      <output wsam:Action="http://model/ServicioUniversidadSW/buscarMatriculaResponse" message="tns:buscarMatriculaResponse" />
+    </operation>
+    <operation name="eliminarPorCodigoEstudiante">
+      <input wsam:Action="http://model/ServicioUniversidadSW/eliminarPorCodigoEstudiante" message="tns:eliminarPorCodigoEstudiante" />
+    </operation>
+    <operation name="actualizarEstudiantePorCodigo">
+      <input wsam:Action="http://model/ServicioUniversidadSW/actualizarEstudiantePorCodigo" message="tns:actualizarEstudiantePorCodigo" />
+    </operation>
+    <operation name="listarProgramas">
+      <input wsam:Action="http://model/ServicioUniversidadSW/listarProgramasRequest" message="tns:listarProgramas" />
+      <output wsam:Action="http://model/ServicioUniversidadSW/listarProgramasResponse" message="tns:listarProgramasResponse" />
+    </operation>
+    <operation name="getEstudiantes">
+      <input wsam:Action="http://model/ServicioUniversidadSW/getEstudiantesRequest" message="tns:getEstudiantes" />
+      <output wsam:Action="http://model/ServicioUniversidadSW/getEstudiantesResponse" message="tns:getEstudiantesResponse" />
+    </operation>
+    <operation name="cargarDatosEstudiantes">
+      <input wsam:Action="http://model/ServicioUniversidadSW/cargarDatosEstudiantes" message="tns:cargarDatosEstudiantes" />
+    </operation>
+    <operation name="cargarDatosMatricula">
+      <input wsam:Action="http://model/ServicioUniversidadSW/cargarDatosMatricula" message="tns:cargarDatosMatricula" />
+    </operation>
+    <operation name="listarMatriculas">
+      <input wsam:Action="http://model/ServicioUniversidadSW/listarMatriculasRequest" message="tns:listarMatriculas" />
+      <output wsam:Action="http://model/ServicioUniversidadSW/listarMatriculasResponse" message="tns:listarMatriculasResponse" />
+    </operation>
+    <operation name="anadirEstudiante">
+      <input wsam:Action="http://model/ServicioUniversidadSW/anadirEstudiante" message="tns:anadirEstudiante" />
+    </operation>
+    <operation name="anadirMatricula">
+      <input wsam:Action="http://model/ServicioUniversidadSW/anadirMatricula" message="tns:anadirMatricula" />
+    </operation>
+    <operation name="eliminarPorNumeroMatricula">
+      <input wsam:Action="http://model/ServicioUniversidadSW/eliminarPorNumeroMatricula" message="tns:eliminarPorNumeroMatricula" />
+    </operation>
+    <operation name="actualizarMatricula">
+      <input wsam:Action="http://model/ServicioUniversidadSW/actualizarMatricula" message="tns:actualizarMatricula" />
+    </operation>
+  </portType>
+  <binding name="ServicioUniversidadSWPortBinding" type="tns:ServicioUniversidadSW">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getMatriculas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProgramas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEstudiantes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cargarDatosPrograma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+    <operation name="buscarEstudiantePorCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPorCodigoEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+    <operation name="actualizarEstudiantePorCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+    <operation name="listarProgramas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getEstudiantes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cargarDatosEstudiantes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+    <operation name="cargarDatosMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+    <operation name="listarMatriculas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="anadirEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+    <operation name="anadirMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+    <operation name="eliminarPorNumeroMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+    <operation name="actualizarMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+  </binding>
+  <service name="ServicioUniversidadSW">
+    <port name="ServicioUniversidadSWPort" binding="tns:ServicioUniversidadSWPortBinding">
+      <soap:address location="http://192.168.16.4:7101/AplicacionServidorJava-ProyectoServidorJavaSW-context-root/ServicioUniversidadSWPort" />
+    </port>
+  </service>
+</definitions>
